@@ -44,14 +44,17 @@ export const UNIT_PREF = Object.freeze({
 })
 
 export const UNIT_CONVERT = Object.freeze({
-  kmToMile = 0.62137119,
-  MileToKm = 1.609344,
-  lbsToKg = 0.45359237,
-  kgToLbs = 2.20462262185,
+  kmToMile: 0.62137119,
+  MileToKm: 1.609344,
+  lbsToKg: 0.45359237,
+  kgToLbs: 2.20462262185,
 })
 
 export const EXERCISE_NAME = Object.freeze({
   // CARDIO
+  warmup: 'Warmup',
+  cooldown: 'Cooldown',
+  initervals: 'Intervals',
   ELLIPTICAL_WARMUP: "Elliptical, Warmup",
   ELLIPTICAL_INTERVAL: "Elliptical, Intervals",
   STAIR_STEPPER: "Stair Stepper Machine",
