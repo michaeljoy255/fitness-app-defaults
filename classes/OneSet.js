@@ -1,4 +1,4 @@
-export default class ASet {
+export default class OneSet {
   constructor({
     weight = null,
     reps = null,
