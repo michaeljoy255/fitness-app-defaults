@@ -1,16 +1,15 @@
-import { createId } from '../utils/utils'
+import Base from './Base'
+import ExercisesContainer from './ExercisesContainer'
 
-export default class Workout {
+export default class Workout extends Base {
   constructor({
     name = null,
-    exerciseIds = [],
-    lastRecordId = null,
-    records = null
+    exercises = new ExercisesContainer(),
+    previousRecord = null,
   } = {}) {
-    this.id = createId()
-    this.name = name
-    this.exerciseIds = exerciseIds
-    this.lastRecordId = lastRecordId
-    this.records = records
+    super()
+    this._name = name
+    this._exercises = exercises
+    this._previousRecord = previousRecord
   }
 }

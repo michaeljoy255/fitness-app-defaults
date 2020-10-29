@@ -1,13 +1,11 @@
-import { createId } from '../utils/utils'
+import BaseRecord from './BaseRecord'
 
-export default class WorkoutRecord {
+export default class WorkoutRecord extends BaseRecord {
   constructor({
-    finishedAt = null,
+    duration = null,
     notes = null,
   } = {}) {
-    this.id = createId()
-    this.createdAt = new Date()
-    this.finishedAt = finishedAt
-    this.notes = notes
+    super(notes)
+    this._duration = duration
   }
 }
