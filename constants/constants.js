@@ -17,7 +17,8 @@ export const EXERCISE_CATEGORY = Object.freeze({
 
 export const EQUIPMENT_TYPE = Object.freeze({
   barbell: 'Barbell',
-  dumbbells: 'Dumbbells',
+  dumbbell: 'Dumbbell',
+  machine: 'Machine',
   cableMachine: 'Cable Machine',
   cardioMachine: 'Cardio Machine',
   weightMachine: 'Weight Machine',
@@ -44,10 +45,22 @@ export const UNIT_PREF = Object.freeze({
 })
 
 export const UNIT_CONVERT = Object.freeze({
-  kmToMile: 0.62137119,
-  MileToKm: 1.609344,
+  kmToMi: 0.62137119,
+  miToKm: 1.609344,
   lbsToKg: 0.45359237,
   kgToLbs: 2.20462262185,
+  cmToIn: null,
+  inToCm: null,
+})
+
+export const REGEX = Object.freeze({})
+
+export const LIMIT = Object.freeze({
+  maxExercises: 1000,
+  maxWorkouts: 1000,
+  nameLength: 50,
+  descriptionLength: 300,
+  noteLength: 300,
 })
 
 export const EXERCISE_NAME = Object.freeze({

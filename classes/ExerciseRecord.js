@@ -1,16 +1,11 @@
-import BaseRecord from './BaseRecord'
-import ExerciseSetsContainer from './ExerciseSetsContainer'
+import Note from './Note'
 
-export default class ExerciseRecord extends BaseRecord {
+export default class ExerciseRecord extends Note {
   constructor({
-    duration = null,
-    distance = null,
-    notes = null,
-    sets = new ExerciseSetsContainer(),
+    note = null,
+    sets = [],
   } = {}) {
-    super(notes)
-    this._duration = duration
-    this._distance = distance
+    super({note})
     this._sets = sets
   }
 }

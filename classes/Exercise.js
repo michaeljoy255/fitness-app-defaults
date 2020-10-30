@@ -1,44 +1,19 @@
-import Base from './Base'
+import Label from './Label'
+import ExerciseInputs from './ExerciseInputs'
 
-export default class Exercise extends Base {
+export default class Exercise extends Label {
   constructor({
     name = null,
     description = null,
     category = null,
     equipment = null,
     previousRecord = null,
-    hasSets = false,
-    hasWeight = false,
-    hasReps = false,
-    hasDuration = false,
-    hasDistance = false,
+    inputs = new ExerciseInputs()
   } = {}) {
-    super()
-    this._name = name
-    this._description = description
+    super({name, description})
     this._category = category
     this._equipment = equipment
     this._previousRecord = previousRecord
-    this._hasSets = hasSets
-    this._hasWeight = hasWeight
-    this._hasReps = hasReps
-    this._hasDuration = hasDuration
-    this._hasDistance = hasDistance
-  }
-
-  get name() {
-    if (this._equipment) {
-      return `${this._name}, ${this._equipment}`
-    } else {
-      return this._name
-    }
-  }
-
-  get description() {
-    return this._description
-  }
-
-  get category() {
-    return this._category
+    this._inputs = inputs
   }
 }

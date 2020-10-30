@@ -1,14 +1,13 @@
-import Base from './Base'
-import ExercisesContainer from './ExercisesContainer'
+import Container from './Container'
 
-export default class Workout extends Base {
+export default class Workout extends Label {
   constructor({
     name = null,
-    exercises = new ExercisesContainer(),
+    description = null,
+    exercises = new Container(),
     previousRecord = null,
   } = {}) {
-    super()
-    this._name = name
+    super({name, description})
     this._exercises = exercises
     this._previousRecord = previousRecord
   }

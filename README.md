@@ -1,21 +1,27 @@
-# fitness-app-defaults
+# Fitness App Defaults
 
-Helps generate default data for the main fitness app. Will also use it as a testing ground.
+Helps generate default data for the main fitness app. Also used as a testing ground.
 
 ---
 
 ## Todos
 
-- Research and setup (Go slow and do one at a time)
-  1. LICENSE File
-  1. EditorConfig
-  1. Local VSCode snippets, extensions, settings
-  1. Markdownlint
-  1. Stylelint
-  1. Prettier
-  1. ESLint
-  1. Babel
-  1. Jest
+Research and setup (Go slow and do one at a time)
+
+- Add basic UI for testing (html, css, js)
+  - Tailwind CSS
+- Research EditorConfig and VSCode
+- Local VSCode snippets, extensions, settings
+- Generate defaults for fitness app (exercises & workouts)
+- Markdownlint
+- Stylelint
+- Prettier
+- ESLint
+- Babel
+- Jest
+- TypeScript
+- Webpack
+- Mock fitness app UX
 
 ---
 
@@ -35,3 +41,12 @@ Helps generate default data for the main fitness app. Will also use it as a test
 ### Store (Vuex, Redux, etc.)
 
 - Same as database, but only load data as needed
+
+---
+
+## Unrelated Tasks
+
+- Build a Vue CLI project and eject it to see how Webpack is setup
+- Build a Hygen test project
+- Build a TypeScript test project
+- Build a boilerplate project for you to expand on

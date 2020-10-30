@@ -1,11 +1,11 @@
-import BaseRecord from './BaseRecord'
+import Note from './Note'
 
-export default class WorkoutRecord extends BaseRecord {
+export default class WorkoutRecord extends Note {
   constructor({
+    note = null,
     duration = null,
-    notes = null,
   } = {}) {
-    super(notes)
+    super({note})
     this._duration = duration
   }
 }
