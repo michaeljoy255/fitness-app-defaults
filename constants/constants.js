@@ -62,6 +62,7 @@ export const DEFAULT_DESCRIPTIONS = Object.freeze({
   cooldown: 'Spend a few minutes cooling down.',
   stretching: 'Spend a few minutes stretching muscles you have or will use.',
   conditioning: 'Jumping jacks, mountain climbers, burpees, or other cardio exercise with or without weights.'
+  // Need descriptions!
 })
 
 export const EXERCISE_NAME = Object.freeze({
