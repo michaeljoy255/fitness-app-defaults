@@ -6,11 +6,10 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 
 ## Todos
 
-Research and setup (Go slow and do one at a time)
+### Slowly research and setup each
 
 - Add basic UI for testing (html, css, js)
   - Tailwind CSS
-- Research EditorConfig and VSCode
 - Local VSCode snippets, extensions, settings
 - Generate defaults for fitness app (exercises & workouts)
 - Markdownlint
@@ -18,6 +17,7 @@ Research and setup (Go slow and do one at a time)
 - Prettier
 - ESLint
 - Babel
+- Husky
 - Jest
 - TypeScript
 - Webpack
