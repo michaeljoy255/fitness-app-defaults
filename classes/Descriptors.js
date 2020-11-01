@@ -1,6 +1,6 @@
-import Entity from './Entity'
+import Entity from './Entity.js'
 
-export default class Label extends Entity {
+export default class Descriptors extends Entity {
   constructor({
     name = null,
     description = null,

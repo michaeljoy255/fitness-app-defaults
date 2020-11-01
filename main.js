@@ -1,3 +1,3 @@
-import { EXERCISE_CATEGORY } from './constants/constants.js'
+import { DEFAULT_CATEGORY } from './constants/constants.js'
 
-console.log(EXERCISE_CATEGORY)
+console.log(DEFAULT_CATEGORY)

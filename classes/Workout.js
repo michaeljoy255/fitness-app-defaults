@@ -1,14 +1,15 @@
-import Container from './Container'
+import Descriptors from './Descriptors.js'
+import EntityContainer from './EntityContainer.js'
 
-export default class Workout extends Label {
+export default class Workout extends Descriptors {
   constructor({
     name = null,
     description = null,
-    exercises = new Container(),
+    exercises = null,
     previousRecord = null,
   } = {}) {
-    super({name, description})
-    this._exercises = exercises
+    super({ name, description })
+    this._exercises = new EntityContainer({ exercises })
     this._previousRecord = previousRecord
   }
 }
