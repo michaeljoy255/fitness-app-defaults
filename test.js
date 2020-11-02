@@ -35,3 +35,6 @@ console.log(equipment.getAll())
 - Inputs
 
 */
+import { DEFAULT_EXERCISE } from './constants/defaults.js'
+
+console.log(DEFAULT_EXERCISE)
