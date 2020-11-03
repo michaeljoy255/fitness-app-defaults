@@ -8,6 +8,7 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 
 ### Slowly research and setup each
 
+- Sort method for containers
 - Add basic UI for testing (html, css, js)
   - Tailwind CSS
 - Local VSCode snippets, extensions, settings
@@ -25,7 +26,7 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 
 ---
 
-## Notes
+## Data Storage Locations
 
 ### Database (Firebase, IndexedDB, Local Storage, etc.)
 
@@ -38,11 +39,43 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 - activeWorkout
 - activeExercises
 
-### Store (Vuex, Redux, etc.)
+### Active Data (Local Storage)
 
-- Same as database, but only load data as needed
+- activeWorkout
+- activeExerciseRecords
+
+### App Store (Vuex, Redux, etc.)
+
+- Combination of Database and Active Data
+- Only load data into store as needed
 
 ---
+
+## Importer / Exporter (JSON, CSV, PDF?)
+
+```javascript
+{
+  exportReport: {
+    appVersion: Number,
+    exporterVersion: Number,
+    createdAt: Date,
+    totalCategories: Number,
+    totalEquipment: Number,
+    totalWorkouts: Number,
+    totalWorkoutRecords: Number,
+    totalExercises: Number,
+    totalExerciseRecords: Number,
+  },
+  categories: [],
+  equipment: [],
+  workouts: [],
+  workoutRecords: [],
+  exercises: [],
+  exerciseRecords: [],
+}
+```
+
+___
 
 ## Unrelated Tasks
 

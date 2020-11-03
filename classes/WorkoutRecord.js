@@ -1,5 +1,8 @@
 import Note from './Note'
 
+/**
+ * 
+ */
 export default class WorkoutRecord extends Note {
   constructor({
     note = null,

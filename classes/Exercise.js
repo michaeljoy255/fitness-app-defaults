@@ -2,6 +2,9 @@
 import Descriptors from "./Descriptors.js";
 import ExercisePlan from './ExercisePlan.js'
 
+/**
+ * 
+ */
 export default class Exercise extends Descriptors {
   constructor({
     name = null,

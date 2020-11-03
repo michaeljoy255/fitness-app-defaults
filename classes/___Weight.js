@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 export default class Weight {
   constructor({
     weight = null,

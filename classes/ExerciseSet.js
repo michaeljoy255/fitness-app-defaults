@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 export default class ExerciseSet {
   constructor({
     weight = null,

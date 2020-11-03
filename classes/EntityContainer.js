@@ -1,10 +1,17 @@
+/**
+ * 
+ */
 export default class EntityContainer {
   constructor({ entities = [] } = {}) {
     this._entities = entities;
   }
 
-  getAll() {
+  get() {
     return this._entities;
+  }
+
+  set(entities) {
+    this._entities = entities
   }
 
   findById(id) {

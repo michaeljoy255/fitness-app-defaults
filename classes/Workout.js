@@ -1,6 +1,9 @@
 import Descriptors from './Descriptors.js'
 import EntityContainer from './EntityContainer.js'
 
+/**
+ * 
+ */
 export default class Workout extends Descriptors {
   constructor({
     name = null,

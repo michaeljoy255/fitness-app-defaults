@@ -1,10 +1,12 @@
 import Entity from './Entity'
 
+/**
+ * 
+ */
 export default class Measurement extends Entity {
   constructor({
     bodyWeight = null,
     bodyFat = null,
-    height = null,
     neck = null,
     shoulders = null,
     chest = null,
@@ -17,14 +19,13 @@ export default class Measurement extends Entity {
     super()
     this._bodyWeight = bodyWeight
     this._bodyFat = bodyFat
-    this._height = height,
-    this._neck = neck,
-    this._shoulders = shoulders,
-    this._chest = chest,
-    this._biceps = biceps,
-    this._forearms = forearms,
-    this._waist = waist,
-    this._thighs = thighs,
-    this._calves = calves,
+    this._neck = neck
+    this._shoulders = shoulders
+    this._chest = chest
+    this._biceps = biceps
+    this._forearms = forearms
+    this._waist = waist
+    this._thighs = thighs
+    this._calves = calves
   }
 }

@@ -1,10 +1,17 @@
+/**
+ * 
+ */
 export default class StringContainer {
   constructor({ strings = [] } = {}) {
     this._strings = strings
   }
 
-  getAll() {
+  get() {
     return this._strings
+  }
+
+  set(strings) {
+    this._strings = strings
   }
 
   sort() {

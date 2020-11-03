@@ -1,5 +1,8 @@
 import Entity from './Entity.js'
 
+/**
+ * 
+ */
 export default class Descriptors extends Entity {
   constructor({
     name = null,

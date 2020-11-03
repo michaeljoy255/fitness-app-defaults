@@ -1,5 +1,8 @@
 import Entity from './Entity'
 
+/**
+ * 
+ */
 export default class Note extends Entity {
   constructor({
     note = null

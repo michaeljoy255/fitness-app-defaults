@@ -20,4 +20,5 @@ export const LIMIT = Object.freeze({
   nameLength: 50,
   descriptionLength: 300,
   noteLength: 300,
+  planLength: 30,
 })
