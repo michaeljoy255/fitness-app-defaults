@@ -1,10 +1,13 @@
-import Entity from './Entity'
+import _Record from './_Record.js'
 
 /**
  * 
  */
-export default class Measurement extends Entity {
+export default class MeasurementRecord extends _Record {
   constructor({
+    id = null,
+    createdAt = null,
+    note = null,
     bodyWeight = null,
     bodyFat = null,
     neck = null,
@@ -16,7 +19,7 @@ export default class Measurement extends Entity {
     thighs = null,
     calves = null,
   } = {}) {
-    super()
+    super({ id, createdAt, note })
     this._bodyWeight = bodyWeight
     this._bodyFat = bodyFat
     this._neck = neck

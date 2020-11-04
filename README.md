@@ -6,9 +6,16 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 
 ## Todos
 
+### Standard Tasks
+
+- Research how to add the default exercises to the workouts
+- Timer class
+- WorkoutTimer class (for app later)
+- StaticTime class (for app later)
+- WorkoutSummary class (for app later)
+
 ### Slowly research and setup each
 
-- Sort method for containers
 - Add basic UI for testing (html, css, js)
   - Tailwind CSS
 - Local VSCode snippets, extensions, settings
@@ -75,7 +82,32 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 }
 ```
 
-___
+---
+
+## Class Outline
+
+- ExercisePlan
+- `_Id`
+  - User
+  - ExerciseSet
+  - `_Record`
+    - WorkoutRecord
+    - ExerciseRecord
+    - MeasurementRecord
+  - `_Descriptors`
+    - Exercise
+    - Workout
+- `_IdContainer`
+  - ExerciseSetContainer
+  - `_RecordContainer`
+    - WorkoutRecordContainer
+    - ExerciseRecordContainer
+    - MeasurementRecordContainer
+  - `_DescriptorsContainer`
+    - ExerciseContainer
+    - WorkoutContainer
+
+---
 
 ## Unrelated Tasks
 

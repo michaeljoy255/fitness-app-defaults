@@ -1,16 +1,19 @@
-import Note from './Note'
+import _Record from './_Record.js'
+// import ExerciseSets
 
 /**
  * 
  */
-export default class ExerciseRecord extends Note {
+export default class ExerciseRecord extends _Record {
   constructor({
+    id = null,
+    createdAt = null,
     note = null,
-    exerciseId = null,
     sets = [],
+    exerciseId = null,
   } = {}) {
-    super({note})
-    this._exerciseId = exerciseId
+    super({ id, createdAt, note })
     this._sets = sets
+    this._exerciseId = exerciseId
   }
 }

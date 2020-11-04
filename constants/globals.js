@@ -17,6 +17,8 @@ export const REGEX = Object.freeze({})
 export const LIMIT = Object.freeze({
   maxExercises: 5000,
   maxWorkouts: 500,
+  maxWorkoutExercises: 100,
+  maxExerciseSets: 100,
   nameLength: 50,
   descriptionLength: 300,
   noteLength: 300,

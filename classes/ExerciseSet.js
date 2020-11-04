@@ -1,13 +1,17 @@
+import _Id from './_Id.js'
+
 /**
  * 
  */
-export default class ExerciseSet {
+export default class ExerciseSet extends _Id {
   constructor({
+    id = null,
     weight = null,
     reps = null,
     duration = null,
     distance = null,
   } = {}) {
+    super({ id })
     this._weight = weight
     this._reps = reps
     this._duration = duration
@@ -30,19 +34,19 @@ export default class ExerciseSet {
     return this._distance
   }
 
-  set weight(w) {
-    this._weight = w
+  set weight(weight) {
+    this._weight = weight
   }
 
-  set reps(r) {
-    this._reps = r
+  set reps(reps) {
+    this._reps = reps
   }
 
   set duration(time) {
     this._duration = time
   }
 
-  set distance(d) {
-    this._distance = d
+  set distance(distance) {
+    this._distance = distance
   }
 }
