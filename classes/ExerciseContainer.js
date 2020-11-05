@@ -12,7 +12,7 @@ export default class ExerciseContainer extends _DescriptorsContainer {
     return this._items.find((item) => item.name === name )
   }
 
-  findByEquipment(equipt) {
-    return this._items.find((item) => item.equipt === equipt )
+  findByEquipment(equipment) {
+    return this._items.find((item) => item.equipment === equipment )
   }
 }

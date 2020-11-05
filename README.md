@@ -8,11 +8,43 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 
 ### Standard Tasks
 
-- Research how to add the default exercises to the workouts
-- Timer class
-- WorkoutTimer class (for app later)
-- StaticTime class (for app later)
-- WorkoutSummary class (for app later)
+- Research using the Singleton pattern (+ other patterns)
+- Add the default exercises to the workouts
+  - Decide what exercises to add to workouts
+- Consider what methods each of your classes will need (especially container classes)
+- Consider moving all code to the Nuxt Fitness App
+- Classes for the defaults repo
+  - Importer (JSON, CSV)
+  - Exporter (JSON, CSV, PDF)
+  - Report (breakdown)
+
+    ```javascript
+    {
+      exportReport: {
+        appVersion: Number,
+        exporterVersion: Number,
+        createdAt: Date,
+        totalCategories: Number,
+        totalEquipment: Number,
+        totalWorkouts: Number,
+        totalWorkoutRecords: Number,
+        totalExercises: Number,
+        totalExerciseRecords: Number,
+      },
+      categories: [],
+      equipment: [],
+      workouts: [],
+      workoutRecords: [],
+      exercises: [],
+      exerciseRecords: [],
+    }
+    ```
+
+- UI Classes for later
+  - Timer class
+  - WorkoutTimer class (for app later)
+  - StaticTime class (for app later)
+  - WorkoutSummary class (for app later)
 
 ### Slowly research and setup each
 
@@ -38,13 +70,11 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 ### Database (Firebase, IndexedDB, Local Storage, etc.)
 
 - users
-- measurements
 - exercises
 - workouts
+- measurementRecords
 - exerciseRecords
 - workoutRecords
-- activeWorkout
-- activeExercises
 
 ### Active Data (Local Storage)
 
@@ -55,32 +85,6 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 
 - Combination of Database and Active Data
 - Only load data into store as needed
-
----
-
-## Importer / Exporter (JSON, CSV, PDF?)
-
-```javascript
-{
-  exportReport: {
-    appVersion: Number,
-    exporterVersion: Number,
-    createdAt: Date,
-    totalCategories: Number,
-    totalEquipment: Number,
-    totalWorkouts: Number,
-    totalWorkoutRecords: Number,
-    totalExercises: Number,
-    totalExerciseRecords: Number,
-  },
-  categories: [],
-  equipment: [],
-  workouts: [],
-  workoutRecords: [],
-  exercises: [],
-  exerciseRecords: [],
-}
-```
 
 ---
 

@@ -9,7 +9,7 @@ export default class _Record extends _Id {
     createdAt = null,
     note = null,
   } = {}) {
-    super({ id })
+    super(id)
     !createdAt ? this._initCreatedAt() : this._createdAt = createdAt
     this._note = note
   }

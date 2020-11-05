@@ -10,7 +10,7 @@ export default class _Descriptors extends _Id {
     description = null,
     previousRecord = null,
   } = {}) {
-    super({ id })
+    super(id)
     this._name = name
     this._description = description
     this._previousRecord = previousRecord
