@@ -6,12 +6,55 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 
 ## Todos
 
+### Default Workouts
+
+- Chest #1
+  - Warm-up
+  - Bench Press
+  - Incline Bench Press
+  - Decline Bench Press
+  - Cool-down
+  - Stretching
+- Back #1
+  - Warm-up
+  - Bent Over Rows
+  - Stiff Leg Deadlift
+  - Back Flyes
+  - Cool-down
+  - Stretching
+- Legs #1
+  - Warm-up
+  - Leg Curls
+  - Leg Extensions
+  - Squats
+  - Cool-down
+  - Stretching
+- Arms and Shoulders #1
+  - Warm-up
+  - Bicep Curls
+  - Tricep Pulls
+  - Front Arm Raises
+  - Side Arm Raises
+  - Diagonal Arm Raises
+  - Shrugs
+  - Cool-down
+  - Stretching
+- Core #1
+  - Warm-up
+  - Russian Twist
+  - Torso Twist
+  - Oblique Side Bends
+  - Farmer's WAlk
+  - Abdominal Crunch
+  - Cool-down
+  - Stretching
+
 ### Standard Tasks
 
 - Add the default exercises to the workouts
-  - Decide what exercises to add to workouts
+  - NOTE: Might be easier to generate the workouts directly from the DEFAULT_EXERCISE constants
 - Consider what methods each of your classes will need (especially container classes)
-- Consider moving all code to the Nuxt Fitness App
+- Move all code to the Nuxt Fitness App and Test launch it
 - Adapter/Wrapper pattern for data (storage)
 - Classes for the defaults repo
   - Importer (JSON, CSV)

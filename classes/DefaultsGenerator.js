@@ -9,17 +9,17 @@ export default class DefaultsGenerator {
   constructor() {
     this._defaultExercises = new ExerciseContainer()
     this._defaultWorkouts = new WorkoutContainer()
-    
+
     this._defaultExercises.items = this._initExercises()
     this._defaultWorkouts.items = this._initWorkouts()
   }
 
   get exercises() {
-    return this._defaultExercises.items
+    return this._defaultExercises
   }
 
   get workouts() {
-    return this._defaultWorkouts.items
+    return this._defaultWorkouts
   }
 
   _initExercises() {
@@ -38,11 +38,20 @@ export default class DefaultsGenerator {
   }
 
   _initWorkouts() {
-    return []
+    const workout1 = new Workout({
+      name: 'Chest #1',
+      description: '',
+    })
+    workout1.exercises.items = [
+      new ExerciseContainer(this.getExerciseByNameAndEquipment('Warm-up', 'None')),
+      new ExerciseContainer(this.getExerciseByNameAndEquipment('Warm-up', 'None')),
+    ]
+
+    return [workout1]
   }
 
   getExerciseByNameAndEquipment(name, equipment) {
-    const exerciseContainer = new ExerciseContainer(exercises.findByName(name))
+    const exerciseContainer = new ExerciseContainer(this._defaultExercises.findByName(name))
     exerciseContainer.items = exerciseContainer.findByEquipment(equipment)
     return exerciseContainer.items[0]
   }
