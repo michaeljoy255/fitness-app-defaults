@@ -24,3 +24,23 @@ export const LIMIT = Object.freeze({
   noteLength: 300,
   planLength: 30,
 })
+
+export const INPUT_TYPE = Object.freeze({
+  confirmation: 'Confirmation',
+  sets: 'Sets',
+  weight: 'Weight',
+  reps: 'Reps',
+  duration: 'Duration',
+  distance: 'Distance',
+})
+
+/*
+export const ICON = Object.freeze({
+  none: '',
+  weight: 'fitness_center',
+  reps: 'replay',
+  duration: 'history',
+  distance: 'place',
+  sets: 'list',
+})
+*/

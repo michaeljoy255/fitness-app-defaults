@@ -8,11 +8,11 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 
 ### Standard Tasks
 
-- Research using the Singleton pattern (+ other patterns)
 - Add the default exercises to the workouts
   - Decide what exercises to add to workouts
 - Consider what methods each of your classes will need (especially container classes)
 - Consider moving all code to the Nuxt Fitness App
+- Adapter/Wrapper pattern for data (storage)
 - Classes for the defaults repo
   - Importer (JSON, CSV)
   - Exporter (JSON, CSV, PDF)

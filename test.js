@@ -1,42 +1,25 @@
-import ExerciseContainer from './classes/ExerciseContainer.js'
-import Exercise from './classes/Exercise.js'
-import WorkoutContainer from './classes/WorkoutContainer.js'
-import Workout from './classes/Workout.js'
-import { DEFAULT_EXERCISE } from './constants/defaults.js'
+import DefaultsGenerator from './classes/DefaultsGenerator.js'
 
 // Exercise Generation
-const exercises = new ExerciseContainer()
+const defaults = new DefaultsGenerator()
+console.log(defaults.exercises)
+console.log(defaults.exercises.length)
+console.log(defaults.exercises[0])
 
-Object.values(DEFAULT_EXERCISE).forEach(({ name, description, category, equipment, plan }) => {
-  exercises.add(new Exercise({
-    name,
-    description,
-    category,
-    equipment,
-    sets: plan.sets,
-    weight: plan.weight,
-    reps: plan.reps,
-    duration: plan.duration,
-    distance: plan.distance,
-  }))
-})
+// // Workout Generation
+// const workouts = new WorkoutContainer()
 
-console.log(exercises.items)
+// workouts.add(new Workout({
+//   name: 'Cardio Day',
+//   description: 'testing',
+//   exercises: [
+//     new Exercise({ name: 'Test1' }),
+//     new Exercise({ name: 'Test2' }),
+//     new Exercise({ name: 'Test3' }),
+//   ],
+// }))
 
-// Workout Generation
-const workouts = new WorkoutContainer()
+// console.log(workouts.items[0].exercises.items)
 
-workouts.add(new Workout({
-  name: 'Cardio Day',
-  description: 'testing',
-  exercises: [
-    new Exercise({ name: 'Test1' }),
-    new Exercise({ name: 'Test2' }),
-    new Exercise({ name: 'Test3' }),
-  ],
-}))
-
-console.log(workouts.items[0].exercises.items)
-
-console.log('---Total Exercises:', exercises.items.length)
-console.log('---Total Workouts:', workouts.items.length)
+// console.log('---Total Exercises:', exercises.items.length)
+// console.log('---Total Workouts:', workouts.items.length)
