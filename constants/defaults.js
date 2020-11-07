@@ -803,9 +803,20 @@ export const DEFAULT_EXERCISE = Object.freeze({
       { inputType: INPUT_TYPE.reps, hint: '50-100' },
     ],
   },
+  russianTwistDumbbell: {
+    name: 'Russian Twist',
+    description: 'Sit with feet off the ground while you twist and tap the ground with the weight on each side of you.',
+    category: DEFAULT_CATEGORY.core,
+    equipment: DEFAULT_EQUIPMENT.dumbbell,
+    inputs: [
+      { inputType: INPUT_TYPE.sets, hints: '1-3' },
+      { inputType: INPUT_TYPE.weight, hints: '10+' },
+      { inputType: INPUT_TYPE.reps, hint: '25-50' },
+    ],
+  },
   russianTwistPlate: {
     name: 'Russian Twist',
-    description: 'Sit with feet off the ground while you twist and tap the ground with the plate on each side of you.',
+    description: 'Sit with feet off the ground while you twist and tap the ground with the weight on each side of you.',
     category: DEFAULT_CATEGORY.core,
     equipment: DEFAULT_EQUIPMENT.plate,
     inputs: [

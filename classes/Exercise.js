@@ -20,4 +20,16 @@ export default class Exercise extends _Descriptors {
     this._equipment = equipment
     this._inputs = inputs
   }
+
+  get category() {
+    return this._category
+  }
+
+  get equipment() {
+    return this._equipment
+  }
+
+  get previousRecord() {
+    return this._previousRecord
+  }
 }
