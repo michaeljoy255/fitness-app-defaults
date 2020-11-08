@@ -2,7 +2,7 @@
  * 
  */
 export default class StringContainer {
-  constructor({ strings = [] } = {}) {
+  constructor(strings = []) {
     this._strings = strings
   }
 

@@ -13,7 +13,7 @@ export default class Workout extends _Descriptors {
     exercises = null,
   } = {}) {
     super({ id, name, description })
-    this._exercises = new ExerciseContainer({ exercises })
+    this._exercises = new ExerciseContainer(exercises)
     this._previousRecord = previousRecord
   }
 

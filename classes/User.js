@@ -10,7 +10,7 @@ export default class User extends _Id {
     birthdate = null,
     height = null,
   } = {}) {
-    super({ id })
+    super(id)
     this._email = email
     this._birthdate = birthdate
     this._height = height

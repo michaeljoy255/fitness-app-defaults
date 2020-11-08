@@ -1,3 +1,4 @@
+import fs from 'fs'
 import ExerciseContainer from './ExerciseContainer.js'
 import Exercise from './Exercise.js'
 import WorkoutContainer from './WorkoutContainer.js'
@@ -144,11 +145,21 @@ export default class DefaultsGenerator {
     return newExerciseContainer.items[0] // Only return the first element
   }
 
-  createJsonFiles() {
-    console.log('createJsonFiles')
+  createJsonFile() {
+    const jsonFileData = {
+      exportReport: {},
+      exercises: this._exerciseContainer,
+      workouts: this._workoutContainer,
+    }
+
+    fs.writeFile('fitness-defaults-export.json', JSON.stringify(jsonFileData), (err) => {
+      if (err) {
+        throw err;
+      }
+  })
   }
 
-  createCsvFiles() {
+  createCsvFile() {
     console.log('createCsvFiles')
   }
 }

@@ -8,11 +8,9 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 
 ### Standard Tasks
 
-- Add the default exercises to the workouts
-  - Need to correct the object <-> array issue
-  - Try coming up with the setters/getters and methods for your current classes
-- Consider what methods each of your classes will need (especially container classes)
 - Move all code to the Nuxt Fitness App and Test launch it
+- Try coming up with the setters/getters and methods for your current classes
+- Consider what methods each of your classes will need (especially container classes)
 - Adapter/Wrapper pattern for data (storage)
 - Migration code for stored data when switching Adapters/Wrappers
 - Classes for the defaults repo
