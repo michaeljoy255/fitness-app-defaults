@@ -29,7 +29,38 @@ export default class Exercise extends _Descriptors {
     return this._equipment
   }
 
-  get previousRecord() {
-    return this._previousRecord
+  get inputs() {
+    return this._inputs
+  }
+
+  set category(category) {
+    this._category = category
+  }
+
+  set equipment(equipment) {
+    this._equipment = equipment
+  }
+
+  set inputs(inputs) {
+    this._inputs = inputs
+  }
+
+  longName() {
+    if (this._equipment && this._equipment !== DEFAULT_EQUIPMENT.none) {
+      return `${this._name}, ${this._equipment}`
+    }
+    return this._name
+  }
+
+  export() {
+    return {
+      id: this._id,
+      name: this._name,
+      description: this._description,
+      previousRecord: this._previousRecord.export(), // wont work
+      category: this._category,
+      equipment: this._equipment,
+      inputs: [], // needs work
+    }
   }
 }

@@ -15,4 +15,24 @@ export default class WorkoutRecord extends _Record {
     this._duration = duration
     this._workoutId = workoutId
   }
+
+  get duration() {
+    return this._duration
+  }
+
+  get workoutId() {
+    return this._workoutId
+  }
+
+  set duration(duration) {
+    this._duration = duration
+  }
+
+  set workoutId(workoutId) {
+    this._workoutId = workoutId
+  }
+
+  export() {
+    return {}
+  }
 }

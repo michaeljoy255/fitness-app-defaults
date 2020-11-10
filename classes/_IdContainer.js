@@ -2,7 +2,7 @@
  * 
  */
 export default class _IdContainer {
-  constructor(items = []) {
+  constructor({ items = [] } = {}) {
     this._items = items
   }
 

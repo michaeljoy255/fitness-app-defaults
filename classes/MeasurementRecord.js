@@ -31,4 +31,88 @@ export default class MeasurementRecord extends _Record {
     this._thighs = thighs
     this._calves = calves
   }
+
+  get bodyWeight() {
+    return this._bodyWeight
+  }
+
+  get bodyFat() {
+    return this._bodyWeight
+  }
+
+  get neck() {
+    return this._neck
+  }
+
+  get shoulders() {
+    return this._shoulders
+  }
+
+  get chest() {
+    return this._chest
+  }
+
+  get biceps() {
+    return this._biceps
+  }
+
+  get forearms() {
+    return this._forearms
+  }
+
+  get waist() {
+    return this._waist
+  }
+
+  get thighs() {
+    return this._thighs
+  }
+
+  get calves() {
+    return this._calves
+  }
+
+  set bodyWeight(bodyWeight) {
+    this._bodyWeight = bodyWeight
+  }
+
+  set bodyFat(bodyFat) {
+    this._bodyWeight = bodyFat
+  }
+
+  set neck(neck) {
+    this._neck = neck
+  }
+
+  set shoulders(shoulders) {
+    this._shoulders = shoulders
+  }
+
+  set chest(chest) {
+    this._chest = chest
+  }
+
+  set biceps(biceps) {
+    this._biceps = biceps
+  }
+
+  set forearms(forearms) {
+    this._forearms = forearms
+  }
+
+  set waist(waist) {
+    this._waist = waist
+  }
+
+  set thighs(thighs) {
+    this._thighs = thighs
+  }
+
+  set calves(calves) {
+    this._calves = calves
+  }
+  
+  export() {
+    return {}
+  }
 }

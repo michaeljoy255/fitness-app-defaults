@@ -1,3 +1,4 @@
+import Exporter from './Exporter.js'
 import fs from 'fs'
 import ExerciseContainer from './ExerciseContainer.js'
 import Exercise from './Exercise.js'
@@ -6,7 +7,7 @@ import Workout from './Workout.js'
 import ExerciseInput from './ExerciseInput.js'
 import { DEFAULT_EXERCISE, DEFAULT_EQUIPMENT } from '../constants/defaults.js'
 
-export default class DefaultsGenerator {
+export default class DefaultsGenerator extends Exporter {
   constructor() {
     this._exerciseContainer = new ExerciseContainer()
     this._workoutContainer = new WorkoutContainer()
@@ -140,11 +141,14 @@ export default class DefaultsGenerator {
   }
 
   _getExerciseByNameAndEquipment(name, equipment) {
-    const newExerciseContainer = new ExerciseContainer(this._exerciseContainer.findByName(name))
+    const newExerciseContainer = new ExerciseContainer({
+      items: this._exerciseContainer.findByName(name)
+    })
     newExerciseContainer.items = newExerciseContainer.findByEquipment(equipment)
     return newExerciseContainer.items[0] // Only return the first element
   }
 
+  // Remove: Use Exporter method instead
   createJsonFile() {
     const jsonFileData = {
       exportReport: {},
@@ -156,10 +160,6 @@ export default class DefaultsGenerator {
       if (err) {
         throw err;
       }
-  })
-  }
-
-  createCsvFile() {
-    console.log('createCsvFiles')
+    })
   }
 }

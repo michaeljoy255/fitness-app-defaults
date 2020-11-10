@@ -2,7 +2,7 @@
  * 
  */
 export default class _Id {
-  constructor(id = null) {
+  constructor({ id = null } = {}) {
     !id ? this._initId() : this._id = id
   }
 

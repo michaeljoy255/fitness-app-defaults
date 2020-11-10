@@ -12,6 +12,22 @@ export default class ExerciseInput {
     this._hint = hint
   }
 
+  get inputType() {
+    return this._inputType
+  }
+
+  get hint() {
+    return this._hint
+  }
+
+  set inputType(inputType) {
+    this._inputType = inputType
+  }
+
+  set hint(hint) {
+    this._hint = hint
+  }
+
   getInputTypeUnit() {
     switch (this._inputType) {
       case 'Sets':
@@ -21,5 +37,9 @@ export default class ExerciseInput {
       default:
         break;
     }
+  }
+  
+  export() {
+    return {}
   }
 }

@@ -11,7 +11,7 @@ export default class ExerciseSet extends _Id {
     duration = null,
     distance = null,
   } = {}) {
-    super(id)
+    super({ id })
     this._weight = weight
     this._reps = reps
     this._duration = duration
@@ -48,5 +48,9 @@ export default class ExerciseSet extends _Id {
 
   set distance(distance) {
     this._distance = distance
+  }
+  
+  export() {
+    return {}
   }
 }

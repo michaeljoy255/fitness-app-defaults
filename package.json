@@ -4,7 +4,7 @@
   "description": "Helps generate defaults for the main fitness app.",
   "main": "main.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node main.js"
   },
   "repository": {
     "type": "git",

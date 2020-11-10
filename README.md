@@ -8,19 +8,31 @@ Helps generate default data for the main fitness app. Also used as a testing gro
 
 ### Standard Tasks
 
+- Finish export methods for classes
+  - Will need utility functions isSomething(x) to check the instanceof
+  - Top level classes must call export() on classes they contain
+  - Make export() methods private in classes as it will be called by exportJson() in Exporter
+  - Export can be done async (once all loaded into big object, JSON stringify it)
+  - Exporter can't be Node, it must run on a website
+  - DefaultsGenerator initialize setup
+    - Init containers (or is this done by the Exporter?)
+    - Fill exercises, workouts, and exportSummary with an auto init method in constructor
+- Determine best defaults for class params
+  - Even if it's something like an empty string?
+
+---
+
 - Move all code to the Nuxt Fitness App and Test launch it
-- Try coming up with the setters/getters and methods for your current classes
-- Consider what methods each of your classes will need (especially container classes)
 - Adapter/Wrapper pattern for data (storage)
 - Migration code for stored data when switching Adapters/Wrappers
 - Classes for the defaults repo
-  - Importer (JSON, CSV)
-  - Exporter (JSON, CSV, PDF)
+  - Importer (JSON)
+  - Exporter (JSON)
   - Report (breakdown)
 
     ```javascript
     {
-      exportReport: {
+      exportSummary: {
         appVersion: Number,
         exporterVersion: Number,
         createdAt: Date,
@@ -30,6 +42,7 @@ Helps generate default data for the main fitness app. Also used as a testing gro
         totalWorkoutRecords: Number,
         totalExercises: Number,
         totalExerciseRecords: Number,
+        totalMeasurementRecords: Number,
       },
       categories: [],
       equipment: [],
@@ -37,6 +50,7 @@ Helps generate default data for the main fitness app. Also used as a testing gro
       workoutRecords: [],
       exercises: [],
       exerciseRecords: [],
+      measurementRecords: [],
     }
     ```
 

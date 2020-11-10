@@ -16,4 +16,24 @@ export default class ExerciseRecord extends _Record {
     this._sets = sets
     this._exerciseId = exerciseId
   }
+
+  get sets() {
+    return this._sets
+  }
+
+  get exerciseId() {
+    return this._exerciseId
+  }
+
+  set sets(sets) {
+    this._sets = sets
+  }
+
+  set exerciseId(exerciseId) {
+    this._exerciseId =exerciseId
+  }
+  
+  export() {
+    return {}
+  }
 }

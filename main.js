@@ -1,3 +1,12 @@
-import { DEFAULT_CATEGORY } from './constants/constants.js'
+import DefaultsGenerator from './classes/DefaultsGenerator.js'
 
-console.log(DEFAULT_CATEGORY)
+// Exercise Generation
+const defaults = new DefaultsGenerator()
+
+console.log('--- Defaults ---')
+console.log('--Exercises:', defaults.exercises.items.length)
+console.log('--Workouts:', defaults.workouts.items.length)
+console.log('--First Exercise:', defaults.exercises.items[0])
+console.log('--First Workout:', defaults.workouts.items[0])
+
+defaults.createJsonFile()
