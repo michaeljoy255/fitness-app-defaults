@@ -49,8 +49,4 @@ export default class ExerciseSet extends _Id {
   set distance(distance) {
     this._distance = distance
   }
-  
-  export() {
-    return {}
-  }
 }

@@ -23,8 +23,4 @@ export default class Workout extends _Descriptors {
   set exercises(exercises) {
     this._exercises = exercises
   }
-  
-  export() {
-    return {}
-  }
 }

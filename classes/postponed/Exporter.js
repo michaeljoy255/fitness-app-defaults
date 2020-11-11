@@ -3,7 +3,7 @@
  */
 export default class Exporter {
   constructor({
-    exportSummary = {}, // remove? handled during construction?
+    exportSummary = {}, // new ExporterSummary()?
     categories = [],
     equipment = [],
     workouts = [],
@@ -23,6 +23,7 @@ export default class Exporter {
   }
 
   exportJson() {
+    // Promise.all([...]) // Get all data exported seperately
     return {}
   }
 }

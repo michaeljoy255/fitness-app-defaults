@@ -38,8 +38,4 @@ export default class ExerciseInput {
         break;
     }
   }
-  
-  export() {
-    return {}
-  }
 }

@@ -32,8 +32,4 @@ export default class ExerciseRecord extends _Record {
   set exerciseId(exerciseId) {
     this._exerciseId =exerciseId
   }
-  
-  export() {
-    return {}
-  }
 }

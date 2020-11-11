@@ -1,4 +1,4 @@
-import Exporter from './Exporter.js'
+// import Exporter from './Exporter.js'
 import fs from 'fs'
 import ExerciseContainer from './ExerciseContainer.js'
 import Exercise from './Exercise.js'
@@ -7,24 +7,27 @@ import Workout from './Workout.js'
 import ExerciseInput from './ExerciseInput.js'
 import { DEFAULT_EXERCISE, DEFAULT_EQUIPMENT } from '../constants/defaults.js'
 
-export default class DefaultsGenerator extends Exporter {
+/**
+ * Postponed: extends Exporter
+ */
+export default class DefaultsGenerator {
   constructor() {
-    this._exerciseContainer = new ExerciseContainer()
-    this._workoutContainer = new WorkoutContainer()
+    this._exercises = new ExerciseContainer()
+    this._workouts = new WorkoutContainer()
     this._initContainers()
   }
 
   get exercises() {
-    return this._exerciseContainer
+    return this._exercises
   }
 
   get workouts() {
-    return this._workoutContainer
+    return this._workouts
   }
 
   _initContainers() {
-    this._exerciseContainer.items = this._initExerciseContainer()
-    this._workoutContainer.items = this._initWorkoutContainer()
+    this._exercises.items = this._initExerciseContainer()
+    this._workouts.items = this._initWorkoutContainer()
   }
 
   _initExerciseContainer() {
@@ -141,19 +144,18 @@ export default class DefaultsGenerator extends Exporter {
   }
 
   _getExerciseByNameAndEquipment(name, equipment) {
-    const newExerciseContainer = new ExerciseContainer({
-      items: this._exerciseContainer.findByName(name)
+    const exercises = new ExerciseContainer({
+      items: this._exercises.findByName(name)
     })
-    newExerciseContainer.items = newExerciseContainer.findByEquipment(equipment)
-    return newExerciseContainer.items[0] // Only return the first element
+    exercises.items = exercises.findByEquipment(equipment)
+    return exercises.items[0] // Only return the first element
   }
 
   // Remove: Use Exporter method instead
   createJsonFile() {
     const jsonFileData = {
-      exportReport: {},
-      exercises: this._exerciseContainer,
-      workouts: this._workoutContainer,
+      exercises: this._exercises,
+      workouts: this._workouts,
     }
 
     fs.writeFile('fitness-defaults-export.json', JSON.stringify(jsonFileData), (err) => {

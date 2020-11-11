@@ -31,8 +31,4 @@ export default class WorkoutRecord extends _Record {
   set workoutId(workoutId) {
     this._workoutId = workoutId
   }
-
-  export() {
-    return {}
-  }
 }

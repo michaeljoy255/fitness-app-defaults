@@ -111,8 +111,4 @@ export default class MeasurementRecord extends _Record {
   set calves(calves) {
     this._calves = calves
   }
-  
-  export() {
-    return {}
-  }
 }
